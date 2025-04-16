@@ -1,25 +1,5 @@
 'use strict';
-
-/**
- * This class represents the game.
- * Now it has a basic structure, that is needed for testing.
- * Feel free to add more props and methods if needed.
- */
 class Game {
-  /**
-   * Creates a new game instance.
-   *
-   * @param {number[][]} initialState
-   * The initial state of the board.
-   * @default
-   * [[0, 0, 0, 0],
-   *  [0, 0, 0, 0],
-   *  [0, 0, 0, 0],
-   *  [0, 0, 0, 0]]
-   *
-   * If passed, the board will be initialized with the provided
-   * initial state.
-   */
   constructor(initialState = null) {
     this.size = 4;
     this.score = 0;
@@ -166,6 +146,7 @@ class Game {
     this.board = this.createEmptyBoard();
     this.createRandomTile();
     this.createRandomTile();
+    this.status = 'playing';
     this.score = 0;
   }
 
